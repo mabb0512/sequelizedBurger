@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Eat da Burger!</title>
+    <link rel="icon" href="/assets/img/burger.jpg">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
+  </head>
+  <body>
+  
+    <!-- Page Container -->
+    <div class="container">
+      <br>
+      <div class="text-center">
+        <img src="/assets/img/burger.jpg" class="w-25 h-25">
+      </div>
+
+      <!-- Page Title -->
+      <h1 class="red_font text-center">Eat da Burger!</h1>
+      <br>
+      
+      <!-- Content from index.handlebars -->
+      {{{body}}}
+
+      <br><br>
+      <!-- Input New Burgers Form -->
+      <form action="burger/create" method="POST"> 
+        <!-- Text Area Input -->
+        <div class="row">
+          <div class="col-md-3"></div> 
+
+          <div class="form-group col-md-6">
+            <center><label for="new_burger" class="red_font">Add a new Burger!</label></center>
+            <textarea class="form-control" columns="8" rows="4" id="new_burger" name="burger_name"></textarea>
+          </div>
+          <div class="col-md-3"></div> 
+        </div>
+      
+        <!-- Submit Button -->
+        <center>
+          <button id="submit-button" type="submit" class="btn btn-danger">Place Order</button>
+        </center>
+      </form>
+      <br>
+    </div>
+
+  </body>
+</html>

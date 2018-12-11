@@ -1,0 +1,45 @@
+<div class="row">
+    <!-- Left side (ready to eat) -->
+    <div class="col-md-6 text-center">
+      <h4>Ready to eat!</h4>
+      <div id="ready_to_eat">
+        {{#each burgers}}
+          {{#unless devoured}}
+          <form action="burger/{{id}}" method="POST">
+              <div class="input-group col-md-12 col-xs-12">
+
+                <li class="form-control">{{id}}. {{burger_name}}</li>
+                <span>
+                  <input name="burgerEater" type="text" class="form-control bugerEaterTextBox" placeholder="Customer Name">
+                </span>
+                <span class="input-group-btn">
+                  <button class="btn btn-success" type="submit">Devour It!</button>
+                </span>
+              </div>
+            </form>   
+          {{/unless}}
+        {{/each}}
+      </div>
+    </div>
+
+    <!-- Right side (already eaten) -->
+    <div class="col-md-6 text-center">
+      <h4>Already eaten!</h4>
+      <div id="already_eaten">
+        {{#each burgers}}
+          {{#if this.devoured}}
+          <div class="input-group col-md-12 col-xs-12">
+              <li class="form-control">{{this.id}}. {{this.burger_name}}
+                <span><i>Eaten by {{this.devourer.devourer_name}}</i></span>
+              </li>
+              
+            </div>
+            {{!-- <li class="form-control">
+              <div class="col-md-6 col-xs-6">{{this.id}}. {{this.burger_name}}</div>
+              <div class="col-md-6 col-xs-6"><i>Eaten by {{this.devourer.devourer_name}}</i></div>
+            </li> --}}
+          {{/if}}
+        {{/each}}
+      </div>
+    </div>
+</div>
