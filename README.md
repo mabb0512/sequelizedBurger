@@ -2,7 +2,7 @@
 
 A burger logger with MySQL, Node, Express, Handlebars and sequialize
 
-Check out the deployed app on Heroku <a href="https://stark-everglades-70187.herokuapp.com/">here!</a>
+Check out the deployed app on Heroku <a href="https://sleepy-gorge-42864.herokuapp.com/">here!</a>
 
 # Instructions
 
